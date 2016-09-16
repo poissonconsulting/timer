@@ -17,7 +17,9 @@ Timer <- R6::R6Class(
       return(!is.null(private$start_time))
     },
     elapsed = function() {
-      private$duration
+      if (!self$is_running())
+        return(private$duration)
+      private$duration + as.duration(interval(private$start_time, now()))
     },
     reset = function() {
       private$duration = lubridate::dseconds(0)
@@ -36,7 +38,7 @@ Timer <- R6::R6Class(
       if (!self$is_running()) {
         warning("timer is not running")
       } else {
-        private$duration <- interval(now(), private$start_time)
+        private$duration <- self$elapsed()
         private$start_time <- NULL
       }
       invisible(self)

@@ -1,3 +1,3 @@
 #' @import R6
-#' @importFrom lubridate dseconds interval now
+#' @importFrom lubridate as.duration dseconds interval now
 NULL
