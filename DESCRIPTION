@@ -1,0 +1,16 @@
+Package: timer
+Title: R6 Timer
+Version: 0.0.0.9000
+Authors@R: person("Joe", "Thorley", email = "joe@thorley.ca", role = c("aut", "cre"))
+Description: Defines R6 Timer Classes.
+License: MIT + file LICENSE
+Depends:
+    R (>= 3.3.1)
+Imports:
+    lubridate,
+    R6
+Suggests:
+    testthat
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
