@@ -27,4 +27,15 @@ test_that("timer starts and stops", {
   expect_true(timer$is_running())
   timer$stop()$start()
   expect_true(timer$is_running())
+  timer$reset()
+  expect_false(timer$is_running())
+})
+
+test_that("elapsed time", {
+  timer <- Timer$new()
+
+  expect_is(timer$elapsed(), "Duration")
+  expect_equal(as.integer(timer$elapsed()), 0L)
+  timer$reset()
+  expect_equal(as.integer(timer$elapsed()), 0L)
 })

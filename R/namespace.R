@@ -1,4 +1,3 @@
 #' @import R6
-#' @importFrom lubridate now with_tz
-#' @importFrom magrittr %<>% %>%
+#' @importFrom lubridate dseconds interval now
 NULL

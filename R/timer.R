@@ -16,11 +16,19 @@ Timer <- R6::R6Class(
     is_running = function() {
       return(!is.null(private$start_time))
     },
+    elapsed = function() {
+      private$duration
+    },
+    reset = function() {
+      private$duration = lubridate::dseconds(0)
+      private$start_time = NULL
+      invisible(self)
+    },
     start = function() {
       if (self$is_running()) {
         warning("timer is already running")
       } else {
-        private$start_time <- now() %>% with_tz("UTC")
+        private$start_time <- now()
       }
       invisible(self)
     },
@@ -28,11 +36,13 @@ Timer <- R6::R6Class(
       if (!self$is_running()) {
         warning("timer is not running")
       } else {
+        private$duration <- interval(now(), private$start_time)
         private$start_time <- NULL
       }
       invisible(self)
     }),
   private = list(
+    duration = lubridate::dseconds(0),
     start_time = NULL
   )
 )
