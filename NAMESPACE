@@ -3,3 +3,7 @@
 export(Timer)
 export(is.timer)
 import(R6)
+importFrom(lubridate,now)
+importFrom(lubridate,with_tz)
+importFrom(magrittr,"%<>%")
+importFrom(magrittr,"%>%")

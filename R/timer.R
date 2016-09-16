@@ -20,12 +20,12 @@ Timer <- R6::R6Class(
       if (self$is_running()) {
         warning("timer is already running")
       } else {
-        private$start_time <- lubridate::now() %>% lubridate::with_tz("UTC")
+        private$start_time <- now() %>% with_tz("UTC")
       }
       invisible(self)
     },
     stop = function() {
-      if (self$is_running()) {
+      if (!self$is_running()) {
         warning("timer is not running")
       } else {
         private$start_time <- NULL
