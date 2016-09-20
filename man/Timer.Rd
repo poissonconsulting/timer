@@ -4,12 +4,49 @@
 \name{Timer}
 \alias{Timer}
 \title{R6 Timer Class}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
+\format{An \code{\link{R6Class}} generator object.}
 \usage{
 Timer
 }
 \description{
-R6 Timer Class
+A simple timer as an R6 class.
+
+The timer has four functions: \code{$start()}, \code{$stop()}, \code{$reset()} and \code{$elapsed()}.
+The \code{$elapsed()} function returns the elapsed wall clock time (as opposed to CPU time)
+as an object of class \code{lubridate::Duration}.
+}
+\examples{
+# instantiate a new timer
+timer <- Timer$new()
+
+# no time has elapsed because the timer has not started
+timer$elapsed()
+
+# start the timer
+timer$start()
+
+# get the time elapsed (as an object of class lubridate::Duration)
+# time elapsed is increasing because the timer is still running
+timer$elapsed()
+timer$elapsed()
+
+# stop the timer
+timer$stop()
+
+# time elapsed is now fixed
+timer$elapsed()
+timer$elapsed()
+
+# because timer is an object of class R6 use the clone() function
+# to make a copy
+timer2 <- timer$clone()
+
+# reset the timer
+timer$reset()
+timer$elapsed()
+
+# timer2 is not reset
+timer2$elapsed()
 }
 \keyword{datasets}
 

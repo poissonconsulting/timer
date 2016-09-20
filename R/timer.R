@@ -1,7 +1,9 @@
 #' Is Timer
 #'
+#' Tests whether x is an object of class \code{\link{Timer}}.
+#'
 #' @param x The object to test.
-#' @return A flag.
+#' @return A flag indicating whether the test was positive.
 #' @export
 is.timer <- function(x) {
     inherits(x, "R6") && inherits(x, "Timer")
@@ -9,6 +11,45 @@ is.timer <- function(x) {
 
 #' R6 Timer Class
 #'
+#' @description A simple timer as an R6 class.
+#'
+#' The timer has four functions: \code{$start()}, \code{$stop()}, \code{$reset()} and \code{$elapsed()}.
+#' The \code{$elapsed()} function returns the elapsed wall clock time (as opposed to CPU time)
+#' as an object of class \code{lubridate::Duration}.
+#'
+#' @format An \code{\link{R6Class}} generator object.
+#' @examples
+#' # instantiate a new timer
+#' timer <- Timer$new()
+#'
+#' # no time has elapsed because the timer has not started
+#' timer$elapsed()
+#'
+#' # start the timer
+#' timer$start()
+#'
+#' # get the time elapsed (as an object of class lubridate::Duration)
+#' # time elapsed is increasing because the timer is still running
+#' timer$elapsed()
+#' timer$elapsed()
+#'
+#' # stop the timer
+#' timer$stop()
+#'
+#' # time elapsed is now fixed
+#' timer$elapsed()
+#' timer$elapsed()
+#'
+#' # because timer is an object of class R6 use the clone() function
+#' # to make a copy
+#' timer2 <- timer$clone()
+#'
+#' # reset the timer
+#' timer$reset()
+#' timer$elapsed()
+#'
+#' # timer2 is not reset
+#' timer2$elapsed()
 #' @export
 Timer <- R6::R6Class(
   "Timer",

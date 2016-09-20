@@ -1,6 +1,6 @@
 Package: timer
 Title: R6 Timer
-Version: 0.0.0.9001
+Version: 0.0.1
 Date: 2016-09-20
 Authors@R: person("Joe", "Thorley", email = "joe@thorley.ca", role = c("aut", "cre"))
 Description: A simple timer as an R6 class.

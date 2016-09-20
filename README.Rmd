@@ -22,8 +22,8 @@ knitr::opts_chunk$set(
 
 An R package implementing a simple timer as an R6 class.
 
-The timer has four functions: `start()`, `stop()`, `reset()` and `elapsed()`.
-The `elapsed()` function returns the elapsed wall clock time (as opposed to CPU time)
+The timer has four functions: `$start()`, `$stop()`, `$reset()` and `$elapsed()`.
+The `$elapsed()` function returns the elapsed wall clock time (as opposed to CPU time)
 as an object of class `lubridate::Duration`.
 
 ## Utilisation

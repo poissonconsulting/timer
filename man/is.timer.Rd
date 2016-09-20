@@ -10,9 +10,9 @@ is.timer(x)
 \item{x}{The object to test.}
 }
 \value{
-A flag.
+A flag indicating whether the test was positive.
 }
 \description{
-Is Timer
+Tests whether x is an object of class \code{\link{Timer}}.
 }
 
