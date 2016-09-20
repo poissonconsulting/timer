@@ -34,19 +34,33 @@ test_that("timer starts and stops", {
 test_that("elapsed time", {
   timer <- Timer$new()
 
+  expect_gt_os <- function (x, y) {
+    if (.Platform$OS.type == "unix") {
+      expect_gt(x, y)
+    } else
+      expect_gte(x, y)
+  }
+
+  expect_lt_os <- function (x, y) {
+    if (.Platform$OS.type == "unix") {
+      expect_lt(x, y)
+    } else
+      expect_lte(x, y)
+  }
+
   expect_is(timer$elapsed(), "Duration")
   expect_equal(as.numeric(timer$elapsed()), 0)
   timer$start()
   timer$stop()
-  expect_gt(as.numeric(timer$elapsed()), 0)
+  expect_gt_os(as.numeric(timer$elapsed()), 0)
   elapsed1 <- timer$elapsed()
   timer$start()
   timer$stop()
-  expect_gt(as.numeric(timer$elapsed()), as.numeric(elapsed1))
+  expect_gt_os(as.numeric(timer$elapsed()), as.numeric(elapsed1))
   timer$reset()
   expect_equal(as.integer(timer$elapsed()), 0L)
   timer$start()
-  expect_lt(as.numeric(timer$elapsed()), as.numeric(timer$elapsed()))
+  expect_lt_os(as.numeric(timer$elapsed()), as.numeric(timer$elapsed()))
   timer$stop()
   expect_identical(timer$elapsed(), timer$elapsed())
 })

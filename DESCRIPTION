@@ -1,8 +1,12 @@
 Package: timer
 Title: R6 Timer
-Version: 0.0.0.9000
+Version: 0.0.0.9001
+Date: 2016-09-20
 Authors@R: person("Joe", "Thorley", email = "joe@thorley.ca", role = c("aut", "cre"))
-Description: Defines R6 Timer Classes.
+Description: A simple timer as an R6 class.
+    The timer has four functions: start(), stop(), reset() and elapsed().
+    The elapsed() function returns the elapsed wall clock time (as opposed to CPU time)
+    as an object of class lubridate::Duration.
 License: MIT + file LICENSE
 Depends:
     R (>= 3.3.1)

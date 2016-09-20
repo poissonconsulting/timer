@@ -8,4 +8,72 @@ timer
 Introduction
 ------------
 
-An R package implementing a simple timer
+An R package implementing a simple timer as an R6 class.
+
+The timer has four functions: `start()`, `stop()`, `reset()` and `elapsed()`. The `elapsed()` function returns the elapsed wall clock time (as opposed to CPU time) as an object of class `lubridate::Duration`.
+
+Utilisation
+-----------
+
+``` r
+library(timer)
+
+# instantiate a new timer
+timer <- Timer$new()
+
+# no time has elapsed because the timer has not started
+timer$elapsed()
+#> [1] "0s"
+
+# start the timer
+timer$start()
+
+# get the time elapsed (as an object of class lubridate::Duration)
+# time elapsed is increasing because the timer is still running
+timer$elapsed()
+#> [1] "0.00130200386047363s"
+timer$elapsed()
+#> [1] "0.00596785545349121s"
+
+# stop the timer
+timer$stop()
+
+# time elapsed is now fixed
+timer$elapsed()
+#> [1] "0.00862789154052734s"
+timer$elapsed()
+#> [1] "0.00862789154052734s"
+
+# because timer is an object of class R6 use the clone() function
+# to make a copy
+timer2 <- timer$clone()
+
+# reset the timer
+timer$reset()
+timer$elapsed()
+#> [1] "0s"
+
+# timer2 is not reset
+timer2$elapsed()
+#> [1] "0.00862789154052734s"
+```
+
+Installation
+------------
+
+To install from GitHub
+
+    # install.packages("devtools")
+    devtools::install_github("poissonconsulting/timer")
+
+Contribution
+------------
+
+Please report any [issues](https://github.com/poissonconsulting/timer/issues).
+
+[Pull requests](https://github.com/poissonconsulting/timer/pulls) are always welcome.
+
+Documentation
+-------------
+
+-   [Introduction to R6 classes](https://cran.r-project.org/web/packages/R6/vignettes/Introduction.html)
