@@ -80,4 +80,4 @@ Please report any [issues](https://github.com/poissonconsulting/timer/issues).
 
 ## Documentation
 
-- [Introduction to R6 classes](https://cran.r-project.org/web/packages/R6/vignettes/Introduction.html)
+- [Introduction to R6 classes](https://cran.r-project.org/package=R6/vignettes/Introduction.html)
