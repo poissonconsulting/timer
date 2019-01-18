@@ -1,19 +1,24 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Travis-CI Build Status](https://travis-ci.org/poissonconsulting/timer.svg?branch=master)](https://travis-ci.org/poissonconsulting/timer) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/timer?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/timer) [![codecov](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer)
 
-timer
-=====
+[![Travis-CI Build
+Status](https://travis-ci.org/poissonconsulting/timer.svg?branch=master)](https://travis-ci.org/poissonconsulting/timer)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/timer?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/timer)
+[![codecov](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer)
 
-Introduction
-------------
+# timer
+
+## Introduction
 
 An R package implementing a simple timer as an R6 class.
 
-The timer has four functions: `$start()`, `$stop()`, `$reset()` and `$elapsed()`. The `$elapsed()` function returns the elapsed wall clock time (as opposed to CPU time) as an object of class `lubridate::Duration`.
+The timer has four functions: `$start()`, `$stop()`, `$reset()` and
+`$elapsed()`. The `$elapsed()` function returns the elapsed wall clock
+time (as opposed to CPU time) as an object of class
+`lubridate::Duration`.
 
-Utilisation
------------
+## Utilisation
 
 ``` r
 library(timer)
@@ -31,18 +36,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.00131702423095703s"
+#> [1] "0.00271487236022949s"
 timer$elapsed()
-#> [1] "0.00608110427856445s"
+#> [1] "0.0077979564666748s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00848102569580078s"
+#> [1] "0.010545015335083s"
 timer$elapsed()
-#> [1] "0.00848102569580078s"
+#> [1] "0.010545015335083s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -55,25 +60,25 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00848102569580078s"
+#> [1] "0.010545015335083s"
 ```
 
-Installation
-------------
+## Installation
 
 To install from GitHub
 
     # install.packages("devtools")
     devtools::install_github("poissonconsulting/timer")
 
-Contribution
-------------
+## Contribution
 
-Please report any [issues](https://github.com/poissonconsulting/timer/issues).
+Please report any
+[issues](https://github.com/poissonconsulting/timer/issues).
 
-[Pull requests](https://github.com/poissonconsulting/timer/pulls) are always welcome.
+[Pull requests](https://github.com/poissonconsulting/timer/pulls) are
+always welcome.
 
-Documentation
--------------
+## Documentation
 
--   [Introduction to R6 classes](https://cran.r-project.org/package=R6/vignettes/Introduction.html)
+  - [Introduction to R6
+    classes](https://cran.r-project.org/package=R6/vignettes/Introduction.html).

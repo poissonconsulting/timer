@@ -49,4 +49,3 @@ timer$elapsed()
 timer2$elapsed()
 }
 \keyword{datasets}
-

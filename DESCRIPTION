@@ -1,7 +1,6 @@
 Package: timer
 Title: R6 Timer
-Version: 0.0.1
-Date: 2016-09-20
+Version: 0.0.1.9000
 Authors@R: person("Joe", "Thorley", email = "joe@thorley.ca", role = c("aut", "cre"))
 Description: A simple timer as an R6 class.
     The timer has four functions: start(), stop(), reset() and elapsed().
@@ -9,7 +8,7 @@ Description: A simple timer as an R6 class.
     as an object of class lubridate::Duration.
 License: MIT + file LICENSE
 Depends:
-    R (>= 3.3.1)
+    R (>= 3.3.0)
 Imports:
     lubridate,
     R6
@@ -17,4 +16,4 @@ Suggests:
     testthat
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.1
