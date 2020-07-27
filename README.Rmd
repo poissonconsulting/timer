@@ -12,9 +12,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/poissonconsulting/timer.svg?branch=master)](https://travis-ci.org/poissonconsulting/timer)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/timer?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/timer)
-[![codecov](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer)
+<!-- badges: start -->
+[![R build status](https://github.com/poissonconsulting/timer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/timer/actions)
+[![Codecov test coverage](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer?branch=master)
+<!-- badges: end -->
+
 
 # timer
 

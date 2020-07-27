@@ -1,11 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![Travis-CI Build
-Status](https://travis-ci.org/poissonconsulting/timer.svg?branch=master)](https://travis-ci.org/poissonconsulting/timer)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/timer?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/timer)
-[![codecov](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer)
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/poissonconsulting/timer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/timer/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer?branch=master)
+<!-- badges: end -->
 
 # timer
 
@@ -36,18 +38,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.00271487236022949s"
+#> [1] "0.00200009346008301s"
 timer$elapsed()
-#> [1] "0.0077979564666748s"
+#> [1] "0.00599813461303711s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.010545015335083s"
+#> [1] "0.00799822807312012s"
 timer$elapsed()
-#> [1] "0.010545015335083s"
+#> [1] "0.00799822807312012s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -60,7 +62,7 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.010545015335083s"
+#> [1] "0.00799822807312012s"
 ```
 
 ## Installation
@@ -78,7 +80,9 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/timer/pulls) are
 always welcome.
 
-## Documentation
+## Code of Conduct
 
-  - [Introduction to R6
-    classes](https://cran.r-project.org/package=R6/vignettes/Introduction.html).
+Please note that the timer project is released with a [Contributor Code
+of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
