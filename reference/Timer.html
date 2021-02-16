@@ -48,6 +48,8 @@ as an object of class lubridate::Duration." />
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -59,9 +61,15 @@ as an object of class lubridate::Duration." />
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -82,12 +90,6 @@ as an object of class lubridate::Duration." />
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -121,7 +123,7 @@ The <code>$elapsed()</code> function returns the elapsed wall clock time (as opp
 as an object of class <code>lubridate::Duration</code>.</p>
     </div>
 
-    <pre class="usage"><span class='kw'>Timer</span></pre>
+    <pre class="usage"><span class='va'>Timer</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
@@ -130,30 +132,37 @@ as an object of class <code>lubridate::Duration</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># instantiate a new timer</span>
-<span class='kw'>timer</span> <span class='op'>&lt;-</span> <span class='kw'>Timer</span><span class='op'>$</span><span class='fu'>new</span>()
+<span class='va'>timer</span> <span class='op'>&lt;-</span> <span class='va'>Timer</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
 
 <span class='co'># no time has elapsed because the timer has not started</span>
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0s"</div><div class='input'>
+<span class='va'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0s"</div><div class='input'>
 <span class='co'># start the timer</span>
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/r/stats/start.html'>start</a></span>()
+<span class='va'>timer</span><span class='op'>$</span><span class='fu'>start</span><span class='op'>(</span><span class='op'>)</span>
 
 <span class='co'># get the time elapsed (as an object of class lubridate::Duration)</span>
 <span class='co'># time elapsed is increasing because the timer is still running</span>
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0.00111889839172363s"</div><div class='input'><span class='kw'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0.00618600845336914s"</div><div class='input'>
+<span class='va'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0.00145483016967773s"</div><div class='input'><span class='va'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0.00729680061340332s"</div><div class='input'>
 <span class='co'># stop the timer</span>
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/r/base/stop.html'>stop</a></span>()
+<span class='va'>timer</span><span class='op'>$</span><span class='kw'>stop</span><span class='op'>(</span><span class='op'>)</span>
 
 <span class='co'># time elapsed is now fixed</span>
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0.0086979866027832s"</div><div class='input'><span class='kw'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0.0086979866027832s"</div><div class='input'>
+<span class='va'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0.01025390625s"</div><div class='input'><span class='va'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0.01025390625s"</div><div class='input'>
 <span class='co'># because timer is an object of class R6 use the clone() function</span>
 <span class='co'># to make a copy</span>
-<span class='kw'>timer2</span> <span class='op'>&lt;-</span> <span class='kw'>timer</span><span class='op'>$</span><span class='fu'>clone</span>()
+<span class='va'>timer2</span> <span class='op'>&lt;-</span> <span class='va'>timer</span><span class='op'>$</span><span class='fu'>clone</span><span class='op'>(</span><span class='op'>)</span>
 
 <span class='co'># reset the timer</span>
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'>reset</span>()
-<span class='kw'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0s"</div><div class='input'>
+<span class='va'>timer</span><span class='op'>$</span><span class='fu'>reset</span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>timer</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0s"</div><div class='input'>
 <span class='co'># timer2 is not reset</span>
-<span class='kw'>timer2</span><span class='op'>$</span><span class='fu'>elapsed</span>()</div><div class='output co'>#&gt; [1] "0.0086979866027832s"</div></pre>
+<span class='va'>timer2</span><span class='op'>$</span><span class='fu'>elapsed</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "0.01025390625s"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -169,7 +178,7 @@ as an object of class <code>lubridate::Duration</code>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
@@ -177,6 +186,8 @@ as an object of class <code>lubridate::Duration</code>.</p>
 
   
 
+
+  
 
   </body>
 </html>
