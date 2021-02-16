@@ -1,5 +1,3 @@
-context("timer")
-
 test_that("timer", {
   expect_is(Timer, "R6ClassGenerator")
 
