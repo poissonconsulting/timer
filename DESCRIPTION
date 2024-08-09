@@ -22,3 +22,5 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
+URL: https://github.com/poissonconsulting/timer
+BugReports: https://github.com/poissonconsulting/timer/issues
