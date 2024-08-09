@@ -7,14 +7,11 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R build
-status](https://github.com/poissonconsulting/timer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/timer/actions)
+[![R-CMD-check](https://github.com/poissonconsulting/timer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/timer/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/timer/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/timer)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/timer)](https://cran.r-project.org/package=timer)
 <!-- badges: end -->
 
 ## Introduction
@@ -44,18 +41,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.00109100341796875s"
+#> [1] "0.000814199447631836s"
 timer$elapsed()
-#> [1] "0.00305414199829102s"
+#> [1] "0.00287199020385742s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00392317771911621s"
+#> [1] "0.00383305549621582s"
 timer$elapsed()
-#> [1] "0.00392317771911621s"
+#> [1] "0.00383305549621582s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -68,7 +65,7 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00392317771911621s"
+#> [1] "0.00383305549621582s"
 ```
 
 ## Installation
