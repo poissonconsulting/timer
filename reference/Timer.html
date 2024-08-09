@@ -143,18 +143,18 @@ as an object of class <code>lubridate::Duration</code>.</p>
 <span class="r-in"><span><span class="co"># get the time elapsed (as an object of class lubridate::Duration)</span></span></span>
 <span class="r-in"><span><span class="co"># time elapsed is increasing because the timer is still running</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.000970840454101562s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.000953197479248047s"</span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00429940223693848s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00416755676269531s"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># stop the timer</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="kw">stop</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># time elapsed is now fixed</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00605607032775879s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00588250160217285s"</span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00605607032775879s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00588250160217285s"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># because timer is an object of class R6 use the clone() function</span></span></span>
 <span class="r-in"><span><span class="co"># to make a copy</span></span></span>
@@ -167,7 +167,7 @@ as an object of class <code>lubridate::Duration</code>.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># timer2 is not reset</span></span></span>
 <span class="r-in"><span><span class="va">timer2</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00605607032775879s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00588250160217285s"</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
