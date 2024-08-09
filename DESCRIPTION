@@ -16,7 +16,7 @@ Imports:
     lubridate,
     R6
 Suggests:
-    testthat,
+    testthat (>= 3.0.0),
     covr
 Encoding: UTF-8
 LazyData: true
@@ -24,3 +24,4 @@ RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/poissonconsulting/timer, https://poissonconsulting.github.io/timer/
 BugReports: https://github.com/poissonconsulting/timer/issues
+Config/testthat/edition: 3

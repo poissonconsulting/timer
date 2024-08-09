@@ -1,5 +1,5 @@
 test_that("timer", {
-  expect_is(Timer, "R6ClassGenerator")
+  expect_s3_class(Timer, "R6ClassGenerator")
 
   timer <- Timer$new()
   expect_true(is.timer(timer))
@@ -48,7 +48,7 @@ test_that("elapsed time", {
     }
   }
 
-  expect_is(timer$elapsed(), "Duration")
+  expect_s4_class(timer$elapsed(), "Duration")
   expect_equal(as.numeric(timer$elapsed()), 0)
   timer$start()
   timer$stop()
