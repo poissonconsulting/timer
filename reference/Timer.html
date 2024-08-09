@@ -143,18 +143,18 @@ as an object of class <code>lubridate::Duration</code>.</p>
 <span class="r-in"><span><span class="co"># get the time elapsed (as an object of class lubridate::Duration)</span></span></span>
 <span class="r-in"><span><span class="co"># time elapsed is increasing because the timer is still running</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00101470947265625s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.000969409942626953s"</span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00434660911560059s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00420451164245605s"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># stop the timer</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="kw">stop</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># time elapsed is now fixed</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00609350204467773s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00583887100219727s"</span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00609350204467773s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00583887100219727s"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># because timer is an object of class R6 use the clone() function</span></span></span>
 <span class="r-in"><span><span class="co"># to make a copy</span></span></span>
@@ -167,7 +167,7 @@ as an object of class <code>lubridate::Duration</code>.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># timer2 is not reset</span></span></span>
 <span class="r-in"><span><span class="va">timer2</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00609350204467773s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00583887100219727s"</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -179,7 +179,7 @@ as an object of class <code>lubridate::Duration</code>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.9000.</p>
 </div>
 
     </footer></div>
