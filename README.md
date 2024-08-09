@@ -1,15 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# timer
+
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/poissonconsulting/timer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/timer/actions)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/poissonconsulting/timer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/timer/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer?branch=master)
+coverage](https://codecov.io/gh/poissonconsulting/timer/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/timer)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit)
 <!-- badges: end -->
-
-# timer
 
 ## Introduction
 
@@ -38,18 +41,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.00200009346008301s"
+#> [1] "0.000814199447631836s"
 timer$elapsed()
-#> [1] "0.00599813461303711s"
+#> [1] "0.00287199020385742s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00799822807312012s"
+#> [1] "0.00383305549621582s"
 timer$elapsed()
-#> [1] "0.00799822807312012s"
+#> [1] "0.00383305549621582s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -62,15 +65,25 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00799822807312012s"
+#> [1] "0.00383305549621582s"
 ```
 
 ## Installation
 
-To install from GitHub
+To install the latest development version from
+[r-universe](https://poissonconsulting.r-universe.dev/timer).
 
-    # install.packages("devtools")
-    devtools::install_github("poissonconsulting/timer")
+``` r
+install.packages("hmstimer", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+To install the latest development version from
+[GitHub](https://github.com/poissonconsulting/timer)
+
+``` r
+# install.packages("pak", repos = sprintf("https://r-lib.github.io/p/pak/stable/%s/%s/%s", .Platform$pkgType, R.Version()$os, R.Version()$arch))
+pak::pak("poissonconsulting/timer")
+```
 
 ## Contribution
 

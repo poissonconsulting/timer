@@ -1,5 +1,5 @@
 test_that("timer", {
-  expect_is(Timer, "R6ClassGenerator")
+  expect_s3_class(Timer, "R6ClassGenerator")
 
   timer <- Timer$new()
   expect_true(is.timer(timer))
@@ -32,21 +32,23 @@ test_that("timer starts and stops", {
 test_that("elapsed time", {
   timer <- Timer$new()
 
-  expect_gt_os <- function (x, y) {
+  expect_gt_os <- function(x, y) {
     if (.Platform$OS.type == "unix") {
       expect_gt(x, y)
-    } else
+    } else {
       expect_gte(x, y)
+    }
   }
 
-  expect_lt_os <- function (x, y) {
+  expect_lt_os <- function(x, y) {
     if (.Platform$OS.type == "unix") {
       expect_lt(x, y)
-    } else
+    } else {
       expect_lte(x, y)
+    }
   }
 
-  expect_is(timer$elapsed(), "Duration")
+  expect_s4_class(timer$elapsed(), "Duration")
   expect_equal(as.numeric(timer$elapsed()), 0)
   timer$start()
   timer$stop()
