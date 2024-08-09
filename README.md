@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# timer
+
 <!-- badges: start -->
 
 [![R build
@@ -8,8 +10,6 @@ status](https://github.com/poissonconsulting/timer/workflows/R-CMD-check/badge.s
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/timer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/timer?branch=master)
 <!-- badges: end -->
-
-# timer
 
 ## Introduction
 
@@ -38,18 +38,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.00200009346008301s"
+#> [1] "0.000871896743774414s"
 timer$elapsed()
-#> [1] "0.00599813461303711s"
+#> [1] "0.00295400619506836s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00799822807312012s"
+#> [1] "0.00385785102844238s"
 timer$elapsed()
-#> [1] "0.00799822807312012s"
+#> [1] "0.00385785102844238s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -62,7 +62,7 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00799822807312012s"
+#> [1] "0.00385785102844238s"
 ```
 
 ## Installation
