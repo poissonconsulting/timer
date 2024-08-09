@@ -11,7 +11,7 @@ Description: A simple timer as an R6 class.
     as an object of class lubridate::Duration.
 License: MIT + file LICENSE
 Depends:
-    R (>= 3.3.0)
+    R (>= 4.0)
 Imports:
     lubridate,
     R6
