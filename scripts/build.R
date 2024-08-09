@@ -18,4 +18,3 @@ devtools::document()
 pkgdown::build_home()
 
 devtools::check()
-
