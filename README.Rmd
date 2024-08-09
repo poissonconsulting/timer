@@ -71,10 +71,15 @@ timer2$elapsed()
 
 ## Installation
 
-To install from GitHub
+To install the latest development version from [r-universe](https://poissonconsulting.r-universe.dev/timer).
+```r
+install.packages("hmstimer", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
 ```
-# install.packages("devtools")
-devtools::install_github("poissonconsulting/timer")
+
+To install the latest development version from [GitHub](https://github.com/poissonconsulting/timer)
+```r
+# install.packages("pak", repos = sprintf("https://r-lib.github.io/p/pak/stable/%s/%s/%s", .Platform$pkgType, R.Version()$os, R.Version()$arch))
+pak::pak("poissonconsulting/timer")
 ```
 
 ## Contribution
@@ -85,4 +90,5 @@ Please report any [issues](https://github.com/poissonconsulting/timer/issues).
 
 ## Code of Conduct
 
-Please note that the timer project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the timer project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). 
+By contributing to this project, you agree to abide by its terms.

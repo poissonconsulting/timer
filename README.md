@@ -44,18 +44,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.000822067260742188s"
+#> [1] "0.00109100341796875s"
 timer$elapsed()
-#> [1] "0.00269603729248047s"
+#> [1] "0.00305414199829102s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00357699394226074s"
+#> [1] "0.00392317771911621s"
 timer$elapsed()
-#> [1] "0.00357699394226074s"
+#> [1] "0.00392317771911621s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -68,15 +68,25 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00357699394226074s"
+#> [1] "0.00392317771911621s"
 ```
 
 ## Installation
 
-To install from GitHub
+To install the latest development version from
+[r-universe](https://poissonconsulting.r-universe.dev/timer).
 
-    # install.packages("devtools")
-    devtools::install_github("poissonconsulting/timer")
+``` r
+install.packages("hmstimer", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+To install the latest development version from
+[GitHub](https://github.com/poissonconsulting/timer)
+
+``` r
+# install.packages("pak", repos = sprintf("https://r-lib.github.io/p/pak/stable/%s/%s/%s", .Platform$pkgType, R.Version()$os, R.Version()$arch))
+pak::pak("poissonconsulting/timer")
+```
 
 ## Contribution
 
