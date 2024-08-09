@@ -6,7 +6,7 @@
 #' @return A flag indicating whether the test was positive.
 #' @export
 is.timer <- function(x) {
-    inherits(x, "R6") && inherits(x, "Timer")
+  inherits(x, "R6") && inherits(x, "Timer")
 }
 
 #' R6 Timer Class
@@ -58,13 +58,14 @@ Timer <- R6::R6Class(
       return(!is.null(private$start_time))
     },
     elapsed = function() {
-      if (!self$is_running())
+      if (!self$is_running()) {
         return(private$duration)
+      }
       private$duration + as.duration(interval(private$start_time, now()))
     },
     reset = function() {
-      private$duration = lubridate::dseconds(0)
-      private$start_time = NULL
+      private$duration <- lubridate::dseconds(0)
+      private$start_time <- NULL
       invisible(self)
     },
     start = function() {
@@ -83,7 +84,8 @@ Timer <- R6::R6Class(
         private$start_time <- NULL
       }
       invisible(self)
-    }),
+    }
+  ),
   private = list(
     duration = lubridate::dseconds(0),
     start_time = NULL
