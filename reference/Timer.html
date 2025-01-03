@@ -49,7 +49,7 @@ as an object of class <code>lubridate::Duration</code>.</p>
 
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
-    <p>An <code>R6Class</code> generator object.</p>
+    <p>An <a href="https://r6.r-lib.org/reference/R6Class.html" class="external-link">R6::R6Class</a> generator object.</p>
     </div>
     <div class="section level2">
     <h2 id="methods">Methods<a class="anchor" aria-label="anchor" href="#methods"></a></h2>
@@ -143,18 +143,18 @@ as an object of class <code>lubridate::Duration</code>.</p>
 <span class="r-in"><span><span class="co"># get the time elapsed (as an object of class lubridate::Duration)</span></span></span>
 <span class="r-in"><span><span class="co"># time elapsed is increasing because the timer is still running</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.000930547714233398s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.000922918319702148s"</span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00407147407531738s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00403499603271484s"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># stop the timer</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="kw">stop</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># time elapsed is now fixed</span></span></span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00564002990722656s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00561261177062988s"</span>
 <span class="r-in"><span><span class="va">timer</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00564002990722656s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00561261177062988s"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># because timer is an object of class R6 use the clone() function</span></span></span>
 <span class="r-in"><span><span class="co"># to make a copy</span></span></span>
@@ -167,7 +167,7 @@ as an object of class <code>lubridate::Duration</code>.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># timer2 is not reset</span></span></span>
 <span class="r-in"><span><span class="va">timer2</span><span class="op">$</span><span class="fu">elapsed</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00564002990722656s"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.00561261177062988s"</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
