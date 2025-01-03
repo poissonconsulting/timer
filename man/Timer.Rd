@@ -4,7 +4,7 @@
 \alias{Timer}
 \title{R6 Timer Class}
 \format{
-An \code{\link{R6Class}} generator object.
+An \link[R6:R6Class]{R6::R6Class} generator object.
 }
 \description{
 A simple timer as an R6 class.
