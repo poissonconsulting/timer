@@ -17,7 +17,7 @@ is.timer <- function(x) {
 #' The \code{$elapsed()} function returns the elapsed wall clock time (as opposed to CPU time)
 #' as an object of class \code{lubridate::Duration}.
 #'
-#' @format An \code{\link{R6Class}} generator object.
+#' @format An [R6Class] generator object.
 #' @examples
 #' # instantiate a new timer
 #' timer <- Timer$new()
