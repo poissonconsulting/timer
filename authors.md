@@ -14,13 +14,13 @@
 Source:
 [`DESCRIPTION`](https://github.com/poissonconsulting/timer/blob/main/DESCRIPTION)
 
-Thorley J (2025). *timer: R6 Timer*. R package version 0.0.1.9000,
+Thorley J (2026). *timer: R6 Timer*. R package version 0.0.1.9000,
 <https://github.com/poissonconsulting/timer>.
 
     @Manual{,
       title = {timer: R6 Timer},
       author = {Joe Thorley},
-      year = {2025},
+      year = {2026},
       note = {R package version 0.0.1.9000},
       url = {https://github.com/poissonconsulting/timer},
     }
