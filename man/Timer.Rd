@@ -7,44 +7,9 @@
 An \link[R6:R6Class]{R6Class} generator object.
 }
 \description{
-A simple timer as an R6 class.
+R6 Timer Class
 
-The timer has four functions: \code{$start()}, \code{$stop()}, \code{$reset()} and \code{$elapsed()}.
-The \code{$elapsed()} function returns the elapsed wall clock time (as opposed to CPU time)
-as an object of class \code{lubridate::Duration}.
-}
-\examples{
-# instantiate a new timer
-timer <- Timer$new()
-
-# no time has elapsed because the timer has not started
-timer$elapsed()
-
-# start the timer
-timer$start()
-
-# get the time elapsed (as an object of class lubridate::Duration)
-# time elapsed is increasing because the timer is still running
-timer$elapsed()
-timer$elapsed()
-
-# stop the timer
-timer$stop()
-
-# time elapsed is now fixed
-timer$elapsed()
-timer$elapsed()
-
-# because timer is an object of class R6 use the clone() function
-# to make a copy
-timer2 <- timer$clone()
-
-# reset the timer
-timer$reset()
-timer$elapsed()
-
-# timer2 is not reset
-timer2$elapsed()
+R6 Timer Class
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -62,7 +27,9 @@ timer2$elapsed()
 \if{latex}{\out{\hypertarget{method-Timer-is_running}{}}}
 \subsection{Method \code{is_running()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Timer$is_running()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}
+\preformatted{Timer$is_running()}
+\if{html}{\out{</div>}}
 }
 
 }
@@ -71,7 +38,9 @@ timer2$elapsed()
 \if{latex}{\out{\hypertarget{method-Timer-elapsed}{}}}
 \subsection{Method \code{elapsed()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Timer$elapsed()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}
+\preformatted{Timer$elapsed()}
+\if{html}{\out{</div>}}
 }
 
 }
@@ -80,7 +49,9 @@ timer2$elapsed()
 \if{latex}{\out{\hypertarget{method-Timer-reset}{}}}
 \subsection{Method \code{reset()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Timer$reset()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}
+\preformatted{Timer$reset()}
+\if{html}{\out{</div>}}
 }
 
 }
@@ -89,7 +60,9 @@ timer2$elapsed()
 \if{latex}{\out{\hypertarget{method-Timer-start}{}}}
 \subsection{Method \code{start()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Timer$start()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}
+\preformatted{Timer$start()}
+\if{html}{\out{</div>}}
 }
 
 }
@@ -98,7 +71,9 @@ timer2$elapsed()
 \if{latex}{\out{\hypertarget{method-Timer-stop}{}}}
 \subsection{Method \code{stop()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Timer$stop()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}
+\preformatted{Timer$stop()}
+\if{html}{\out{</div>}}
 }
 
 }
@@ -108,7 +83,9 @@ timer2$elapsed()
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Timer$clone(deep = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}
+\preformatted{Timer$clone(deep = FALSE)}
+\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -118,5 +95,6 @@ The objects of this class are cloneable with this method.
 }
 \if{html}{\out{</div>}}
 }
+
 }
 }
