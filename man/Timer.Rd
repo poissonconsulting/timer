@@ -48,88 +48,87 @@ timer2$elapsed()
 }
 \section{Methods}{
 \subsection{Public methods}{
-\itemize{
-\item \href{#method-Timer-is_running}{\code{Timer$is_running()}}
-\item \href{#method-Timer-elapsed}{\code{Timer$elapsed()}}
-\item \href{#method-Timer-reset}{\code{Timer$reset()}}
-\item \href{#method-Timer-start}{\code{Timer$start()}}
-\item \href{#method-Timer-stop}{\code{Timer$stop()}}
-\item \href{#method-Timer-clone}{\code{Timer$clone()}}
-}
+  \itemize{
+    \item \href{#method-Timer-is_running}{\code{Timer$is_running()}}
+    \item \href{#method-Timer-elapsed}{\code{Timer$elapsed()}}
+    \item \href{#method-Timer-reset}{\code{Timer$reset()}}
+    \item \href{#method-Timer-start}{\code{Timer$start()}}
+    \item \href{#method-Timer-stop}{\code{Timer$stop()}}
+    \item \href{#method-Timer-clone}{\code{Timer$clone()}}
+  }
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Timer-is_running"></a>}}
 \if{latex}{\out{\hypertarget{method-Timer-is_running}{}}}
 \subsection{\code{Timer$is_running()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}
-\preformatted{Timer$is_running()}
-\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{Timer$is_running()}
+    \if{html}{\out{</div>}}
+  }
 }
 
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Timer-elapsed"></a>}}
 \if{latex}{\out{\hypertarget{method-Timer-elapsed}{}}}
 \subsection{\code{Timer$elapsed()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}
-\preformatted{Timer$elapsed()}
-\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{Timer$elapsed()}
+    \if{html}{\out{</div>}}
+  }
 }
 
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Timer-reset"></a>}}
 \if{latex}{\out{\hypertarget{method-Timer-reset}{}}}
 \subsection{\code{Timer$reset()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}
-\preformatted{Timer$reset()}
-\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{Timer$reset()}
+    \if{html}{\out{</div>}}
+  }
 }
 
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Timer-start"></a>}}
 \if{latex}{\out{\hypertarget{method-Timer-start}{}}}
 \subsection{\code{Timer$start()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}
-\preformatted{Timer$start()}
-\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{Timer$start()}
+    \if{html}{\out{</div>}}
+  }
 }
 
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Timer-stop"></a>}}
 \if{latex}{\out{\hypertarget{method-Timer-stop}{}}}
 \subsection{\code{Timer$stop()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}
-\preformatted{Timer$stop()}
-\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{Timer$stop()}
+    \if{html}{\out{</div>}}
+  }
 }
 
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Timer-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-Timer-clone}{}}}
 \subsection{\code{Timer$clone()}}{
-The objects of this class are cloneable with this method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}
-\preformatted{Timer$clone(deep = FALSE)}
-\if{html}{\out{</div>}}
+  The objects of this class are cloneable with this method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{Timer$clone(deep = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{deep}}{Whether to make a deep clone.}
+    }
+    \if{html}{\out{</div>}}
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{deep}}{Whether to make a deep clone.}
-}
-\if{html}{\out{</div>}}
-}
-
-}
 }
