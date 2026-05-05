@@ -9,7 +9,7 @@ time (as opposed to CPU time) as an object of class
 
 ## Format
 
-An [R6::R6Class](https://r6.r-lib.org/reference/R6Class.html) generator
+An [R6Class](https://r6.r-lib.org/reference/R6Class.html) generator
 object.
 
 ## Methods
@@ -30,7 +30,7 @@ object.
 
 ------------------------------------------------------------------------
 
-### Method `is_running()`
+### `Timer$is_running()`
 
 #### Usage
 
@@ -38,7 +38,7 @@ object.
 
 ------------------------------------------------------------------------
 
-### Method `elapsed()`
+### `Timer$elapsed()`
 
 #### Usage
 
@@ -46,7 +46,7 @@ object.
 
 ------------------------------------------------------------------------
 
-### Method `reset()`
+### `Timer$reset()`
 
 #### Usage
 
@@ -54,7 +54,7 @@ object.
 
 ------------------------------------------------------------------------
 
-### Method [`start()`](https://rdrr.io/r/stats/start.html)
+### `Timer$start()`
 
 #### Usage
 
@@ -62,7 +62,7 @@ object.
 
 ------------------------------------------------------------------------
 
-### Method [`stop()`](https://rdrr.io/r/base/stop.html)
+### `Timer$stop()`
 
 #### Usage
 
@@ -70,7 +70,7 @@ object.
 
 ------------------------------------------------------------------------
 
-### Method `clone()`
+### `Timer$clone()`
 
 The objects of this class are cloneable with this method.
 
@@ -100,18 +100,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.000903844833374023s"
+#> [1] "0.000886440277099609s"
 timer$elapsed()
-#> [1] "0.0041346549987793s"
+#> [1] "0.00407624244689941s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00577664375305176s"
+#> [1] "0.00551748275756836s"
 timer$elapsed()
-#> [1] "0.00577664375305176s"
+#> [1] "0.00551748275756836s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -124,5 +124,5 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00577664375305176s"
+#> [1] "0.00551748275756836s"
 ```
