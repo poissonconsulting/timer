@@ -100,18 +100,18 @@ timer$start()
 # get the time elapsed (as an object of class lubridate::Duration)
 # time elapsed is increasing because the timer is still running
 timer$elapsed()
-#> [1] "0.000816583633422852s"
+#> [1] "0.000842571258544922s"
 timer$elapsed()
-#> [1] "0.00383591651916504s"
+#> [1] "0.00401854515075684s"
 
 # stop the timer
 timer$stop()
 
 # time elapsed is now fixed
 timer$elapsed()
-#> [1] "0.00529789924621582s"
+#> [1] "0.00554990768432617s"
 timer$elapsed()
-#> [1] "0.00529789924621582s"
+#> [1] "0.00554990768432617s"
 
 # because timer is an object of class R6 use the clone() function
 # to make a copy
@@ -124,5 +124,5 @@ timer$elapsed()
 
 # timer2 is not reset
 timer2$elapsed()
-#> [1] "0.00529789924621582s"
+#> [1] "0.00554990768432617s"
 ```
