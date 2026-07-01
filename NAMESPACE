@@ -3,7 +3,9 @@
 export(Timer)
 export(is.timer)
 import(R6)
-importFrom(lubridate,as.duration)
-importFrom(lubridate,dseconds)
-importFrom(lubridate,interval)
-importFrom(lubridate,now)
+importFrom(lubridate,
+  as.duration,
+  dseconds,
+  interval,
+  now
+)
