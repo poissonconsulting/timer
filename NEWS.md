@@ -1,4 +1,9 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# timer 0.0.1.9002 (2026-10-13)
+
+- Internal changes only.
+
 
 # timer 0.0.1.9001 (2026-07-18)
 
