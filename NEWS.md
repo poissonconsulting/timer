@@ -8,8 +8,6 @@
 * Point fledge-tag-on-merge caller at the .yaml reusable
 
 
-# NEWS timer
-
-## v0.0.1
+# timer 0.0.1
 
 - Initial release
